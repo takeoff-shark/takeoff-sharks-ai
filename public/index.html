@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Takeoff Sharks AI — Construction Estimating Assistant</title>
+<link rel="stylesheet" href="/styles.css">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div class="brand">
+    <div class="logo">TS</div>
+    <div>
+      <h1>Takeoff Sharks AI</h1>
+      <p class="tag">Construction estimating • BOQs • Unit-rate build-ups</p>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+<section class="panel">
+  <div class="meta">Ask detailed construction estimating questions — include dimensions/specs for best results.</div>
+  <div id="messages" class="messages"></div>
+  <div class="actions" id="actions">
+    <div class="chip" data-prompt="Concrete slab 60 m² at 125 mm.">Concrete slab</div>
+  </div>
+  <form id="composer" class="composer" onsubmit="return false;">
+    <input id="input" class="input" placeholder="Example: Rebar takeoff for 25 m³ footing">
+    <button id="send" class="btn">Send</button>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div>© <span id="year"></span> Takeoff Sharks</div>
+</footer>
+</div>
+<script src="/app.js"></script>
+<script>document.getElementById("year").textContent=new Date().getFullYear();</script>
+</body>
+</html>
